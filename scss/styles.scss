@@ -1,0 +1,94 @@
+$wide-mobile-width: 550px;
+$tablet-width: 812px;
+$desktop-width: 1024px;
+
+// $brown: #C37941;
+$orange: #df792c;
+$lighter-orange: #f48d3e;
+$charcoal: #202020;
+
+@mixin wide-mobile {
+  @media (min-width: #{$wide-mobile-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin afterOverlay {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@mixin background-image-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(1);
+  background-size: cover;
+  background-position: center;
+  transition: all .2s linear;
+  
+  &:after {
+    @include afterOverlay;
+    background-color: rgba(0,0,0, 0.15);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+.container {
+  transition: transform .2s linear;
+}
+
+a {
+  text-decoration: none;
+}
+
+@import "./_navbar.scss";
+@import "./_hero.scss";
+@import "./_shortDesc.scss";
+@import "./_homeSections.scss";
+@import "./_hours.scss";
+
+@import "./_btn.scss";
+@import "./_pageHero.scss";
+
+@import "./_about.scss";
+
+@import "./_menu.scss";
+
+@import "./_contact.scss";

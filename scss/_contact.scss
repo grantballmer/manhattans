@@ -1,0 +1,173 @@
+.container {
+  width: 100%;
+  @include flex(space-around, center);
+  flex-direction: column;
+
+  position: relative;
+
+  @include tablet {
+    flex-direction: row;
+    height: calc(100vh - 65px);
+    padding: 4%;
+  }
+}
+
+#map {
+  width: 92%;
+  height: calc(75vh - 65px);
+  position: relative;
+  border-radius: 3px;
+  order: 2;
+  margin-bottom: 4%;
+
+  @include tablet {
+    width: 45%;
+    height: 100%;
+    order: 1;
+    margin-bottom: 0;
+  }
+}
+
+.contact-info {
+  width: 100%;
+  height: calc(100vh - 65px);
+  padding: 4%;
+  @include flex(space-between, flex-start);
+  flex-direction: column;
+  border-radius: 3px;
+  color: white;
+
+  order: 1;
+
+  @include tablet {
+    width: 45%;
+    height: 100%;
+    order: 2;
+    padding: 0;
+  }
+}
+
+.contact-info__details {
+  width: 100%;
+  height: 30%;
+  padding: 2%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  @include flex(space-around, center);
+  flex-direction: column;
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    flex: 1;
+  }
+}
+
+.address {
+  @include flex(space-around, center);
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 3;
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  &__item {
+    // width: 50%;
+    @include flex(center, center);
+    font-size: 1.3rem;
+
+    @include wide-mobile {
+      font-size: 1.6rem;
+    }
+
+    @include tablet {
+      width: auto;
+      font-size: 1.6rem;
+    }
+
+    a {
+      color: white;
+      transition: color 0.2s;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+
+    img {
+      margin-right: 5px;
+    }
+  }
+}
+
+.contact-info__form {
+  width: 100%;
+  height: 70%;
+  padding: 4%;
+  background-color: #05386b;
+  display: flex;
+  flex-direction: column;
+  @include wide-mobile {
+    padding: 2%;
+  }
+
+  h3 {
+    text-align: center;
+    font-weight: 200;
+    color: white;
+    font-size: 2.2rem;
+    flex: 1;
+
+    @include tablet {
+      font-size: 3.2rem;
+    }
+  }
+
+  form {
+    width: 100%;
+    flex: 10;
+    @include flex(space-around, center);
+    flex-direction: column;
+    padding: 4%;
+  }
+
+  input,
+  textarea {
+    outline: 0;
+    border: 0;
+    padding-left: 8px;
+    background-color: #052b51;
+    color: white;
+    border-radius: 3px;
+
+    &::placeholder {
+      color: white;
+    }
+  }
+
+  input {
+    width: 100%;
+    height: 13%;
+  }
+
+  textarea {
+    width: 100%;
+    height: 45%;
+    resize: none;
+    padding-top: 10px;
+  }
+
+  input[type="submit"] {
+    cursor: pointer;
+    color: white;
+    background-color: #052b51;
+    transition: all 0.15s;
+
+    &:hover {
+      background-color: white;
+      color: #052b51;
+    }
+  }
+}

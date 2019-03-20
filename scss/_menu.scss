@@ -1,0 +1,260 @@
+.menu {
+  width: 100%;
+}
+
+.category {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  @include flex(center, center);
+  flex-direction: column;
+  // transition: all .8s;
+}
+
+.category__top {
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.6);
+  border-top: 0.5px solid rgba(0, 0, 0, 0.6);
+  position: relative;
+  @include flex(center, center);
+  z-index: 1;
+  transition: color 1s;
+  // overflow: hidden;
+
+  &:hover {
+    color: white;
+
+    .backgroundImg {
+      opacity: 1;
+      background-position: center;
+    }
+  }
+
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.6rem;
+    z-index: 1;
+    text-align: center;
+  }
+
+  // &:after {
+  //   @include afterOverlay;
+  //   // background-image: url("../assets/images/bruschetta.jpg");
+  //   transition: all 1s;
+  //   background-position: top;
+  //   opacity: 0;
+  //   z-index: 0;
+  // }
+
+  // &:hover:after {
+  //   opacity: 1;
+  //   background-position: center;
+  // }
+}
+
+.backgroundImg {
+  @include afterOverlay;
+  transition: all 1s;
+  background-position: top;
+  opacity: 0;
+  z-index: 0;
+
+  &__display {
+    opacity: 1;
+    background-position: center;
+  }
+}
+
+.category__small,
+.category__chili,
+.category__pub {
+  &:hover {
+    color: black;
+  }
+}
+
+.category__small--backgroundImg {
+  background-image: url("../assets/images/bruschetta.jpg");
+}
+.category__salads--backgroundImg {
+  background-image: url("../assets/images/salad.jpg");
+}
+.category__slammies--backgroundImg {
+  background-image: url("../assets/images/sandwich.jpg");
+}
+.category__wraps--backgroundImg {
+  background-image: url("../assets/images/croissant.jpg");
+}
+.category__pub--backgroundImg {
+  background-image: url("../assets/images/nachos.jpeg");
+}
+.category__large--backgroundImg {
+  background-image: url("../assets/images/steak3.jpg");
+}
+.category__burgers--backgroundImg {
+  background-image: url("../assets/images/burger.jpeg");
+}
+.category__chili--backgroundImg {
+  background-image: url("../assets/images/chili-mac.jpg");
+}
+.category__pizzas--backgroundImg {
+  background-image: url("../assets/images/pizza.jpg");
+}
+.category__sandwiches--backgroundImg {
+  background-image: url("../assets/images/sandwich2.jpg");
+}
+
+.dropdown {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  right: 6%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: 2px solid black;
+  z-index: 1;
+  transition: transform 0.4s;
+
+  &__span {
+    width: 75%;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    display: block;
+    background-color: black;
+    transform-origin: center;
+    border-radius: 8px;
+  }
+
+  &__left {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__right {
+    transform: rotate(90deg) translate(-5%, -150%);
+  }
+}
+
+.rotate {
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.category__menu {
+  width: 100%;
+  background-color: white;
+  // height: 0;
+  // max-height: 1200px;
+  max-height: 0;
+  z-index: -1;
+  transition: max-height 1s;
+  padding: 0 6%;
+  // opacity: 0;
+
+  span {
+    font-weight: 700;
+  }
+
+  &--heading {
+    text-align: center;
+    font-size: 3.2rem;
+    margin: 3% 0;
+  }
+}
+
+.expand {
+  max-height: 1200px;
+  // opacity: 1;
+}
+
+.category__menu--list {
+  width: 100%;
+  @include flex(space-between, flex-start);
+  flex-direction: column;
+
+  @include wide-mobile {
+    flex-direction: row;
+  }
+}
+
+.menu-list-center {
+  justify-content: center;
+
+  .item__heading {
+    text-align: center;
+  }
+
+  .items {
+    width: 100%;
+    @include wide-mobile {
+      width: 55%;
+    }
+  }
+}
+
+.items {
+  width: 100%;
+  @include wide-mobile {
+    width: 47%;
+  }
+
+  &__left .item:last-of-type {
+    margin-bottom: 0;
+
+    @include wide-mobile {
+      margin-bottom: 8%;
+    }
+  }
+}
+
+.item {
+  margin: 10% 0;
+  @include wide-mobile {
+    margin: 8% 0;
+  }
+
+  &__heading {
+    color: $orange;
+    margin-bottom: 2%;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    @include wide-mobile {
+      font-size: 1.8rem;
+    }
+
+    span {
+      color: black;
+    }
+  }
+
+  &__desc {
+    font-size: 1.3rem;
+    @include wide-mobile {
+      font-size: 1.6rem;
+    }
+
+    &--center {
+      text-align: center;
+      margin-bottom: 2%;
+    }
+
+    &-end {
+      margin-bottom: 3%;
+    }
+  }
+
+  &__size {
+    font-size: 1.3rem;
+    font-style: italic;
+    @include wide-mobile {
+      font-size: 1.6rem;
+    }
+  }
+}

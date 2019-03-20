@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Manhattan's Pub N' Cheer</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIIpzl-n53bcLuPEv5Z0U9IbQr4prIWcI&callback=initMap"></script>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/" class="nav-main">Manhattan's</a>
+      <div class="nav-links">
+        <a href="/menu">Menu</a>
+        <a href="#">Brunch</a>
+        <a href="#">Catering</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <div class="nav-social">
+        <a href="https://www.facebook.com/ManhattansToledo/" target="_blank"
+          ><i class="fab fa-facebook-square"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/explore/locations/4134130/"
+          target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+      <div class="nav-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="side-nav">
+        <div class="side-nav__exit"><i class="fas fa-times"></i></div>
+        <a href="/menu">Menu</a>
+        <a href="/menu">Brunch</a>
+        <a href="/menu">Catering</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </nav>
+
+    <section class="container">
+      <div id="map"></div>
+
+      <div class="contact-info">
+        <div class="contact-info__details">
+          <!-- <h3>Drop in and say Hi!</h3> -->
+          <h3>Contact Us</h3>
+          <div class="address">
+            <div class="address__item address__location">
+              <img src="../assets/icons/location.svg" alt="location icon" />
+              <p>1516 Adams St. Toledo, Ohio 43604</p>
+            </div>
+            <div class="address__item address__phone">
+              <img src="../assets/icons/phone.svg" alt="phone icon" />
+              <a href="tel:+1-419-243-6675">419.243.6675</a>
+            </div>
+            <div class="address__item address__email">
+              <img src="../assets/icons/email.svg" alt="phone icon" />
+              <a href="mailto:enjoy@manhattanstoledo.com"
+                >enjoy@manhattanstoledo.com</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="contact-info__form">
+          <h3>Send Us A Message</h3>
+          <form>
+            <input type="text" name="name" placeholder="Name" />
+            <input type="email" name="email" placeholder="Email" />
+            <textarea placeholder="Message"></textarea>
+            <input type="submit" value="Send Message" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="hours-container">
+      <h4>Opening Hours</h4>
+      <div class="hours">
+        <div class="hours__item">
+          <div class="hours__item--time">
+            11<span>AM</span> - 11<span>PM</span>
+          </div>
+          <div class="hours__item--days">
+            Mon - Wed
+          </div>
+        </div>
+
+        <div class="hours__item">
+          <div class="hours__item--time">
+            11<span>AM</span> - 12<span>AM</span>
+          </div>
+          <div class="hours__item--days">
+            Thurs - Sat
+          </div>
+        </div>
+
+        <div class="hours__item">
+          <div class="hours__item--time">
+            10<span>AM</span> - 2<span>PM</span>
+          </div>
+          <div class="hours__item--days">
+            Sunday
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../scripts/bundle.js"></script>
+  </body>
+</html>

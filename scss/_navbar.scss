@@ -1,0 +1,109 @@
+nav {
+  width: 100%;
+  height: 65px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: $charcoal;
+  @include flex(space-between, center);
+  padding: 0 6%;
+  z-index: 2;
+
+  a {
+    color: white;
+    font-size: 1.8rem;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+// .nav-main {
+//   // position: absolute;
+//   // top: 50%;
+//   // left: 4%;
+//   // transform: translate(-50%, -50%);
+// }
+
+.nav-links {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  a {
+    margin: 0 8px;
+  }
+}
+
+.nav-social {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  a {
+    font-size: 2.6rem;
+    margin-left: 12px;
+  }
+}
+
+.nav-menu {
+  height: 100%;
+  @include flex(center, center);
+  color: white;
+  font-size: 2.3rem;
+
+  i {
+    cursor: pointer;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.side-nav {
+  height: 100vh;
+  width: 55%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  @include flex(flex-start, center);
+  flex-direction: column;
+  padding: 65px 0;
+  z-index: 4;
+  background-color: black;
+  transition: transform 0.3s;
+
+  @include tablet {
+    display: none;
+  }
+
+  & > a {
+    margin: 6% 0;
+  }
+}
+
+.side-nav__exit {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 32.5px;
+  right: 6%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  @include flex(center, center);
+  font-size: 3.3rem;
+}
+
+.slide__side-nav {
+  transform: translateX(0);
+}

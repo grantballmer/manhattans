@@ -1,0 +1,32 @@
+.page-hero {
+  width: 100%;
+  height: calc(70vh - 65px);
+  position: relative;
+  background-size: cover;
+  // background-position: bottom;
+  
+  &:after {
+    @include afterOverlay;
+    background-color: rgba(0,0,0, 0.3);
+  }
+  
+  h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 4.2rem;
+    z-index: 1;
+  }
+  
+  &__about {
+    background-image: url("../assets/images/restaurant2.jpg");
+    background-position: bottom;
+  }
+  
+  &__menu {
+    background-image: url("../assets/images/steak2.jpg");
+    background-position: center;
+  }
+}
