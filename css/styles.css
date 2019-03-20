@@ -195,7 +195,7 @@ nav a:hover {
   background-image: url("../assets/images/hero.jpg");
   background-size: cover;
   background-position: right;
-  background-attachment: scroll;
+  background-attachment: initial;
   position: relative;
 }
 
