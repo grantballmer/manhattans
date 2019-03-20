@@ -195,7 +195,6 @@ nav a:hover {
   background-image: url("../assets/images/hero.jpg");
   background-size: cover;
   background-position: right;
-  background-attachment: initial;
   position: relative;
 }
 
@@ -310,7 +309,7 @@ nav a:hover {
 
 .short-desc {
   width: 100%;
-  height: 50vh;
+  height: 40vh;
   background-color: rgba(0, 0, 0, 0.92);
   color: white;
   display: -webkit-box;
@@ -322,8 +321,8 @@ nav a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 10%;
-  font-size: 1.6rem;
+  padding: 10%;
+  font-size: 1.4rem;
 }
 
 @media (min-width: 550px) {
@@ -334,6 +333,7 @@ nav a:hover {
 
 @media (min-width: 812px) {
   .short-desc {
+    height: 50vh;
     font-size: 2.4rem;
     padding: 0 20%;
   }
