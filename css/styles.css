@@ -195,13 +195,19 @@ nav a:hover {
   background-image: url("../assets/images/hero.jpg");
   background-size: cover;
   background-position: right;
-  background-attachment: fixed;
+  background-attachment: scroll;
   position: relative;
 }
 
 @media (min-width: 550px) {
   .hero-image {
     background-position: center;
+  }
+}
+
+@media (min-width: 812px) {
+  .hero-image {
+    background-attachment: fixed;
   }
 }
 

@@ -11,11 +11,15 @@
   background-image: url("../assets/images/hero.jpg");
   background-size: cover;
   background-position: right;
-  background-attachment: fixed;
+  background-attachment: scroll;
   position: relative;
 
   @include wide-mobile {
     background-position: center;
+  }
+
+  @include tablet {
+    background-attachment: fixed;
   }
 
   &::after {
