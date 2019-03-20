@@ -14,7 +14,7 @@
 
 #map {
   width: 92%;
-  height: calc(75vh - 65px);
+  height: calc(75vh - 80px);
   position: relative;
   border-radius: 3px;
   order: 2;
@@ -30,7 +30,7 @@
 
 .contact-info {
   width: 100%;
-  height: calc(100vh - 65px);
+  height: calc(100vh - 80px);
   padding: 4%;
   @include flex(space-between, flex-start);
   flex-direction: column;

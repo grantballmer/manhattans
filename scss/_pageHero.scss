@@ -1,30 +1,39 @@
 .page-hero {
   width: 100%;
-  height: calc(70vh - 65px);
+  height: calc(50vh - 80px);
   position: relative;
   background-size: cover;
   // background-position: bottom;
-  
+
+  @include tablet {
+    height: calc(70vh - 65px);
+  }
+
   &:after {
     @include afterOverlay;
-    background-color: rgba(0,0,0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
   }
-  
+
   h2 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 4.2rem;
+    font-size: 3rem;
     z-index: 1;
+    text-align: center;
+
+    @include tablet {
+      font-size: 4.2rem;
+    }
   }
-  
+
   &__about {
     background-image: url("../assets/images/restaurant2.jpg");
     background-position: bottom;
   }
-  
+
   &__menu {
     background-image: url("../assets/images/steak2.jpg");
     background-position: center;

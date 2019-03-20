@@ -1,21 +1,42 @@
 .about {
   width: 100%;
-  @include flex(center,center);
+  @include flex(center, center);
+  flex-direction: column;
   padding: 4% 6%;
-  
-  
+
+  @include wide-mobile {
+    display: block;
+  }
+
+  // @include tablet {
+  //   flex-direction: row;
+  // }
+
   &__image {
-    width: 35%;
-    @include flex(center,center);
-    
+    // width: 35%;
+    // width: 150px;
+    height: 200px;
+    float: left;
+    margin: 20px;
+    @include tablet {
+      height: 300px;
+    }
+    // @include flex(center, center);
+
     img {
       border-radius: 50%;
+      max-height: 100%;
       // border: 4px solid rgba(0,0,0, 0.9);
     }
   }
-  
+
   &__desc {
-    width: 65%;
+    float: none;
+    // width: 65%;
     font-size: 1.6rem;
+
+    @include tablet {
+      font-size: 2rem;
+    }
   }
 }
