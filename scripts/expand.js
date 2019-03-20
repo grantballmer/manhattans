@@ -11,7 +11,7 @@ categoryTops.forEach(top =>
     category.style.overflow = "hidden";
 
     backgroundImg.classList.toggle("backgroundImg__display");
-    dropdown.classList.toggle("rotate");
-    menu.classList.toggle("expand");
+    dropdown.classList.toggle("rotate"); // rotate dropdown button
+    menu.classList.toggle("expand"); // expand categories menu
   })
 );
