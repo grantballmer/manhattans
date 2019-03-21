@@ -36,6 +36,7 @@
   color: white;
   @include flex(center, center);
   flex-direction: column;
+  padding: 0 4%;
 
   & > * {
     margin: 4% 0;
@@ -55,20 +56,26 @@
     }
   }
 
-  p {
-    font-size: 1.8rem;
-    margin-left: 8px;
-    @include tablet {
-      font-size: 2.2rem;
-    }
-  }
+  // p {
+  //   font-size: 1.8rem;
+  //   margin-left: 8px;
+  //   @include tablet {
+  //     font-size: 2.2rem;
+  //   }
+  // }
 
   &__tagline {
     @include flex(center, center);
     flex-direction: column;
+    font-size: 1.4rem;
+    margin-left: 8px;
 
     @include wide-mobile {
       flex-direction: row;
+    }
+
+    @include tablet {
+      font-size: 2.2rem;
     }
   }
 }
