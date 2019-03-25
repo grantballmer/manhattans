@@ -1,3 +1,3 @@
 # Manhattan's Pub & Cheer
 
-Personal portfolio site. Available here: [Manhattan's](https://grantballmer.github.io/manhattans)
+Redesign for the Toledo area restaurant Manhattan's Pub & Cheer. Available here: [Manhattan's](https://grantballmer.github.io/manhattans)
